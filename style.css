@@ -1,0 +1,1363 @@
+* {
+    margin: 0%;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0%;
+}
+
+html {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+header {
+    height: 9.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* logo menu */
+header .logomenu {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logomenu h4 a {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.logomenu button {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logomenu ul li {
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.logomenu ul {
+    display: flex;
+    list-style: none;
+    /* padding-left: 10px; */
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* login menu */
+header .loginmenu {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0px;
+}
+
+.loginmenu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+header .loginup svg {
+    display: none;
+}
+
+header .loginmenu li {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+header .loginmenu li a {
+    padding: 8px;
+    border-radius: 12px;
+}
+
+header .loginmenu li a:hover {
+    background-color: #555252;
+}
+
+header .loginmenu li i {
+    padding-right: 5px;
+}
+
+header .loginmenu li svg {
+    padding-right: 5px;
+}
+
+.loginmenu .signup-btn a {
+    color: black;
+    background: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.loginmenu .signup-btn a:hover {
+    background: rgb(185, 182, 182);
+}
+
+/* hero content */
+.hero {
+    height: 90.5vh;
+    background: url(uber-hero1.webp) no-repeat center center/cover;
+    display: grid;
+    align-items: center;
+    padding: 0px;
+    padding-left: 100px;
+}
+
+.hero .herobox {
+    width: 580px;
+    height: 520px;
+    background: white;
+}
+
+.herobox .box-heads {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 25%;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.box-heads .box-head {
+    display: grid;
+    text-align: center;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.box-head p {
+    position: relative;
+}
+
+.box-head:first-child p::after {
+    content: " ";
+    position: absolute;
+    top: 47px;
+    left: -20px;
+    width: 70px;
+    height: 5px;
+    background-color: #000000;
+}
+
+.herobox .box-contents {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hidden image */
+.hiddenimg {
+    display: none;
+}
+
+/* box contents */
+.box-contents h4 {
+    font-size: 3.3rem;
+    text-align: center;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.lineininput {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.box-contents input {
+    width: 80%;
+    height: 50px;
+    padding-left: 30px;
+    border: none;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: black;
+    overflow: hidden;
+    background: rgba(129, 129, 129, 0.082);
+    margin-top: 12px;
+}
+
+.box-contents .box-content2,
+.box-contents .box-content3 {
+    display: none;
+}
+
+.lineininput .linein::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    width: 5px;
+    height: 5px;
+    bottom: -10px;
+    border: 1px solid #000000;
+    background-color: #F6F6F6;
+}
+
+.lineininput .linein {
+    position: absolute;
+    top: 58px;
+    left: 75px;
+    width: 1px;
+    height: 50px;
+    background-color: #000000;
+}
+
+.lineininput .linein::after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    top: -10px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    background-color: #F6F6F6;
+}
+
+.lineininput svg {
+    position: absolute;
+    top: 45px;
+    color: #1d1d1ddc;
+    right: 80px;
+}
+
+.lineininput svg:hover {
+    color: #030000;
+}
+
+.box-contents .butn {
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+}
+
+.box-contents button:first-child {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    margin-left: 50px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+}
+
+.box-contents button:first-child:hover {
+    background-color: rgba(0, 0, 0, 0.850);
+}
+
+.box-contents button:last-child {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    margin-left: 30px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: rgba(12, 9, 9, 0.082);
+}
+
+.box-contents button:last-child:hover {
+    box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.384);
+}
+
+.box-content2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-content2 h4 {
+    width: 80%;
+    padding-left: 20px;
+    font-size: x-larger;
+}
+
+.box-content2 p {
+    padding-left: 40px;
+    padding-top: 20px;
+    font-size: 15px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.box-content2 button {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 13px 20px;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+.box-content2 button:hover {
+    background-color: rgba(0, 0, 0, 0.850);
+}
+
+.box-content2 p:last-child {
+    padding-left: 0%;
+    margin-left: 40px;
+    width: 100%;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid rgba(83, 83, 83, 0.527);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: max-content;
+}
+
+.box-content2 p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.5s ease-in-out;
+}
+
+.box-content2 p:hover::after {
+    width: 100%;
+}
+
+.box-content3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-content3 h4 {
+    width: 100%;
+    text-align: left;
+    padding-left: 40px;
+    font-size: x-larger;
+}
+
+.box-content3 p {
+    width: 90%;
+    padding-left: 40px;
+    padding-top: 20px;
+    font-size: 15px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* the uber you know */
+.uberyouknow {
+    height: 330px;
+    background: url(uberimage.webp) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+}
+
+.uberyouknow h6 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.2rem;
+}
+
+.uberyouknow p {
+    font-size: 1.1rem;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.uberyouknow button {
+    width: 140px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    margin-left: 50px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    margin: 0%;
+}
+
+.uberyouknow button:hover {
+    background-color: rgba(0, 0, 0, 0.850);
+}
+
+/* Focused on safety, wherever you go */
+.safety {
+    padding: 70px 100px 50px 100px;
+}
+
+.safety h2 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #333232;
+    padding-bottom: 30px;
+}
+
+.safety2box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.safetybox1,
+.safetybox2 {
+    width: 49%;
+}
+
+.safetybox2 img,
+.safetybox1 img {
+    width: 100%;
+}
+
+.safetybox1 h6,
+.safetybox2 h6 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #555252;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+.safetybox1 p,
+.safetybox2 p {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: #555252;
+    padding: 10px 0px;
+}
+
+.safety2box .readmore {
+    display: flex;
+}
+
+.safety2box .readmore p {
+    position: relative;
+    border-bottom: 1.5px solid rgba(83, 83, 83, 0.527);
+    overflow: hidden;
+    width: max-content;
+}
+
+.safety2box .readmore p:last-child {
+    margin-left: 20px;
+}
+
+.safety2box .readmore p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.5s ease-in-out;
+}
+
+.safety2box .readmore p:hover::after {
+    width: 100%;
+}
+
+/* About us */
+
+.aboutus {
+    padding: 50px 100px 50px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.aboutus .productbox {
+    padding: 20px;
+}
+
+.productbox h6 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #242424cc;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-top: 12px;
+}
+
+.productbox p {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #242424;
+    font-size: 1rem;
+    padding-top: 12px;
+}
+
+.productbox p:last-child {
+    position: relative;
+    width: max-content;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid rgba(83, 83, 83, 0.527);
+    overflow: hidden;
+}
+
+.productbox p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.5s ease-in-out;
+}
+
+.productbox p:hover::after {
+    width: 100%;
+}
+
+/*   Ride with Uber   &  It’s easier in the apps    */
+.rideuber {
+    padding: 30px 100px 50px 100px;
+}
+
+.rideuber h1,
+.apps h1 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #242424;
+    font-size: 2.3rem;
+}
+
+.rideuber .row {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.rideuber .autoprod {
+    padding-top: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.autoprod div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.autoprod h6 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: -1.6px;
+}
+
+.autoprod p {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #242424;
+    font-size: 1.1rem;
+}
+
+.autoprod:hover>svg {
+    transform: translateX(10px);
+    transition: transform 0.5s ease;
+}
+
+/* It’s easier in the apps */
+.apps {
+    padding: 80px 100px 70px 100px;
+    background-color: #3b3b3b11;
+}
+
+.apps .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.apps .autoprod {
+    margin-top: 60px;
+    padding: 25px;
+    align-items: center;
+    display: flex;
+    background-color: white;
+}
+
+.apps .download {
+    width: 100%;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.apps .autoprod:hover .download>svg {
+    transform: translateX(10px);
+    transition: transform 0.5s ease;
+}
+
+/* sign up to drive */
+.singup {
+    padding: 80px 100px 80px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+.singup .drive,
+.ride {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+}
+
+.singup .drive>h1,
+.ride>h1 {
+    color: #000000;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.ride:hover>svg,
+.drive:hover>svg {
+    animation: moveRightAndHide 1s ease-in-out forwards;
+    transition: 10ms;
+}
+
+@keyframes moveRightAndHide {
+    0% {
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(25px);
+        color: #555252;
+        transition: 1ms;
+        opacity: 1;
+    }
+
+    35% {
+        transform: translateX(35px);
+        color: #555252;
+        transition: 1ms;
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(50px);
+        color: #555252;
+        transition: 1ms;
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateX(25px);
+        color: #555252;
+        transition: 1ms;
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateX(0px);
+        color: #555252;
+        transition: 1ms;
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-10px);
+        color: #555252;
+        transition: 1ms;
+        opacity: 0;
+    }
+
+    90% {
+        transform: translateX(-5px);
+        color: #555252;
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0px);
+        color: #2e2e2ecc;
+        opacity: 1;
+    }
+}
+
+.desclimer {
+    text-align: center;
+    font-size: medium;
+    color: orange;
+    background-color: #000000;
+    padding-bottom: 10px;
+}
+
+.desclimer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* footer */
+footer {
+    color: white;
+    background: #000000;
+    padding: 90px;
+}
+
+footer .maincon h3 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+footer .maincon h5 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 150px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 30px 0px;
+}
+
+.maincon h5:hover {
+    border-bottom: 1px solid white;
+}
+
+.maincon .footermenu {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    padding-top: 50px;
+}
+
+.footermenu ul h6 {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+.footermenu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.footermenu ul li {
+    font-size: 1rem;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+/* socail menu */
+
+.socialmenu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+
+.socialmenu .socialicon {
+    width: 40%;
+}
+
+.socialmenu .socialicon ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.socialicon ul li i {
+    padding: 20px;
+}
+
+.socialicon ul li i:hover {
+    background-color: #242424c4;
+    border-radius: 5px;
+}
+
+.socialmenu .englishicon {
+    width: 20%;
+}
+
+.socialmenu .englishicon ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.socialmenu .englishicon ul li {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.socialmenu .englishicon ul li i {
+    padding-right: 10px;
+}
+
+/* appstore */
+
+.appstore {
+    width: 24%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.appstore img {
+    width: 130px;
+    cursor: pointer;
+}
+
+/* copyrights */
+
+.copyrights {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.copyrights p {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #ffffff6c;
+    font-size: 0.8rem;
+}
+
+.copyrights ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.copyrights ul li {
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-right: 30px;
+    font-weight: 300;
+    color: #ffffff8c;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* media queres */
+/* tablet screen */
+@media (max-width: 1228px) {
+
+    /* header */
+    header .logomenu {
+        width: 15%;
+    }
+
+    header .logomenu ul {
+        display: none;
+    }
+
+    header .enpro {
+        display: none;
+    }
+
+    header .loginup svg {
+        display: block;
+        padding-left: 10px;
+    }
+
+    header .loginmenu {
+        width: 85%;
+        padding-right: 0%;
+    }
+
+    /* hero */
+    .hero {
+        height: 80vh;
+        background: transparent;
+        padding: 0px;
+    }
+
+    .hero .herobox {
+        width: 100%;
+        height: 100%;
+    }
+
+    .herobox .box-heads {
+        height: 25%;
+        border-bottom: 1px solid rgb(211, 211, 211);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    .box-heads .box-head {
+        display: grid;
+        text-align: center;
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    .herobox .box-contents {
+        align-items: start;
+        padding-top: 40px;
+        justify-content: flex-start;
+    }
+
+    .herobox .box-contents h4 {
+        padding-left: 30px;
+        font-size: 2.4rem;
+    }
+
+    .box-contents input {
+        width: 95%;
+    }
+
+    .lineininput {
+        padding-top: 25px;
+    }
+
+    .box-contents .butn {
+        padding-bottom: 20px;
+        padding-top: 50px;
+    }
+
+    .box-contents button:first-child {
+        font-size: 1.1rem;
+        border-radius: 5px;
+        padding: 15px 20px 15px 20px;
+    }
+
+    .box-contents .lineininput .linein {
+        left: 5%;
+        top: 45%;
+    }
+
+    .lineininput svg {
+        position: absolute;
+        top: 35%;
+        color: #1d1d1ddc;
+        right: 5%;
+    }
+
+    /* hidden image */
+    .hiddenimg {
+        display: block;
+    }
+
+    .hiddenimg img {
+        width: 100%;
+    }
+
+    /* uber you know */
+    .uberyouknow {
+        padding-left: 4%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .uberyouknow h6 {
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .uberyouknow p {
+        width: 85%;
+    }
+
+    /* Focused on safety, wherever you go */
+    .safety {
+        padding: 50px 0px 50px 30px;
+    }
+
+    .safety h2 {
+        font-size: 1.9rem;
+        padding-bottom: 20px;
+    }
+
+    .safetybox1 h6,
+    .safetybox2 h6 {
+        font-size: 1.15rem;
+    }
+
+    .safetybox1 p,
+    .safetybox2 p {
+        font-size: 1.1rem;
+    }
+
+    .safety2box .readmore {
+        flex-direction: column;
+    }
+
+    .safety2box .readmore p:last-child {
+        margin: 0%;
+    }
+
+    /* about us */
+    .aboutus {
+        padding: 50px 0px 50px 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .productbox h6 {
+        font-size: 1.3rem;
+    }
+
+    .productbox p {
+        font-size: 1.1rem;
+    }
+
+    /* Ride with Uber & It’s easier in the apps */
+    .rideuber {
+        padding: 50px 20px 50px 30px;
+    }
+
+    .rideuber .row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .autoprod img {
+        width: 100px;
+    }
+
+    /* It’s easier in the apps */
+    .apps {
+        padding: 50px 0px 50px 30px;
+        background-color: #ffffff11;
+    }
+
+    .apps .row {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+    }
+
+    .apps .autoprod {
+        width: 95%;
+        margin-top: 0px;
+        display: flex;
+        padding: 1%;
+        border: 1px solid #8581814b;
+    }
+
+    .apps .autoprod:first-child {
+        margin-top: 30px;
+    }
+
+    .apps .row p {
+        display: none;
+    }
+
+    .apps .download {
+        width: 82%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .apps i {
+        padding-left: 0px;
+    }
+
+    /* signup */
+    .singup {
+        padding: 50px 30px 50px 30px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .singup .drive>h1,
+    .ride>h1 {
+        font-size: 2rem;
+    }
+
+    .singup .drive>i,
+    .ride>i {
+        font-size: 2.3rem;
+    }
+
+    /* footer */
+    footer {
+        color: white;
+        background: #000000;
+        padding: 100px 30px 50px 30px;
+    }
+
+    .maincon .footermenu {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        padding-top: 50px;
+    }
+
+    .footermenu ul h6 {
+        font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding-bottom: 15px;
+    }
+
+    .footermenu ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-bottom: 50px;
+    }
+
+    .footermenu ul li {
+        font-size: 1rem;
+        font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding-bottom: 15px;
+        cursor: pointer;
+    }
+
+    /* social menu */
+    .socialmenu {
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .socialmenu .englishicon {
+        width: 20%;
+        padding-top: 60px;
+    }
+
+    .socialmenu .socialicon {
+        width: 70%;
+    }
+
+    .socialmenu .englishicon ul {
+        flex-direction: column;
+    }
+
+    .socialmenu .englishicon ul li {
+        padding-top: 10px;
+    }
+
+    /* appstore */
+    .appstore {
+        width: 42%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+
+    .appstore img {
+        width: 130px;
+        cursor: pointer;
+    }
+
+    /* copyrights */
+    .copyrights {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .copyrights ul {
+        padding-top: 50px;
+        justify-content: start;
+    }
+}
+
+/* linein responsive */
+@media (min-width: 920px) and (max-width: 1228px) {
+
+    .box-contents .lineininput .linein {
+        left: 4%;
+        top: 45%;
+    }
+
+}
+
+/* mobile screen */
+@media (max-width: 640px) {
+
+    header .logomenu {
+        width: 22%;
+    }
+
+    .herobox .box-contents h4 {
+        font-size: 2rem;
+    }
+
+    .box-contents .butn {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .box-contents button:first-child {
+        width: 90%;
+        margin-left: 30px;
+    }
+
+    .box-contents button:last-child {
+        width: 90%;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+
+    /* uber you know */
+    .uberyouknow h6 {
+        width: 100%;
+        font-size: 1.8rem;
+    }
+
+    .uberyouknow p {
+        width: 95%;
+    }
+
+    /* Focused on safety, wherever you go */
+    .safety {
+        padding: 50px 0px 50px 30px;
+    }
+
+    .safety2box {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .safetybox1,
+    .safetybox2 {
+        width: 95%;
+        font-size: 1.15rem;
+    }
+
+    .safetybox2 {
+        padding-top: 50px;
+    }
+
+    /* about us */
+    .aboutus {
+        padding: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Ride with Uber & It’s easier in the apps */
+    .rideuber {
+        padding: 20px;
+    }
+
+    .rideuber h1 {
+        font-size: 1.8rem;
+    }
+
+    /* It’s easier in the apps */
+    .apps {
+        padding: 20px;
+    }
+
+    .apps h1 {
+        font-size: 1.8rem;
+    }
+
+    .apps .download {
+        padding: 0%;
+    }
+
+    /* signup */
+    .singup {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .singup .drive>h1,
+    .ride>h1 {
+        font-size: 1.8rem;
+    }
+
+    .singup .drive>i,
+    .ride>i {
+        font-size: 2.1rem;
+    }
+
+    .ride {
+        padding-top: 30px;
+    }
+
+    /* footer */
+    .maincon .footermenu {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* social menu */
+    .socialmenu {
+        flex-direction: column;
+        padding-left: 0%;
+        padding-top: 0px;
+    }
+
+    .socialmenu .englishicon {
+        width: 40%;
+        padding-top: 30px;
+        padding-left: 0%;
+    }
+
+    .socialmenu .socialicon {
+        padding-left: 0%;
+        width: 90%;
+    }
+
+    /* appstore */
+    .appstore {
+        width: 65%;
+    }
+
+    /* copyrights */
+
+    .copyrights ul {
+        padding-top: 40px;
+    }
+}
