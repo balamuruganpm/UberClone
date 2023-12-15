@@ -26,7 +26,3 @@ This Uber clone is my education purpose only.
 [Whatsapp](https://wa.me/+919677804820)
 
 [Email](mailto:balamuruganedsty@gmail.com)
-
-### Declaimer
-
-This Netflix clone is education purpose only.
