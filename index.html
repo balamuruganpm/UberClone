@@ -71,16 +71,19 @@
                     <div class="box-head box-head1" onclick="changeMe('box-head1')" style="cursor: pointer;">
                         <i class="bi bi-car-front" style="font-size: 25px;"></i>
                         <p>Ride</p>
+                        <div class="lineboxhead1"></div>
                     </div>
 
                     <div class="box-head box-head2" onclick="changeMe('box-head2')" style="cursor: pointer;">
                         <i class="bi bi-reception-4" style="font-size: 25px;"></i>
                         <p>Drive or deliver</p>
+                        <div class="lineboxhead2"></div>
                     </div>
 
                     <div class="box-head box-head3" onclick="changeMe('box-head3')" style="cursor: pointer;">
                         <i class="bi bi-key" style="font-size: 25px;"></i>
                         <p>Rent your fleet</p>
+                        <div class="lineboxhead3"></div>
                     </div>
 
                 </div>
@@ -415,24 +418,36 @@
 
     <!-- box click change event -->
     <script>
-
         function changeMe(clickedElement) {
             var content1 = document.querySelector('.box-content1');
             var content2 = document.querySelector('.box-content2');
             var content3 = document.querySelector('.box-content3');
 
+            var lineBoxHead1 = document.querySelector('.lineboxhead1');
+            var lineBoxHead2 = document.querySelector('.lineboxhead2');
+            var lineBoxHead3 = document.querySelector('.lineboxhead3');
+
             if (clickedElement === 'box-head1') {
                 content1.style.display = 'block';
                 content2.style.display = 'none';
                 content3.style.display = 'none';
+                lineBoxHead1.style.display = 'block';
+                lineBoxHead3.style.display = 'none';
+                lineBoxHead2.style.display = 'none';
             } else if (clickedElement === 'box-head2') {
                 content1.style.display = 'none';
                 content2.style.display = 'block';
                 content3.style.display = 'none';
+                lineBoxHead1.style.display = 'none';
+                lineBoxHead3.style.display = 'none';
+                lineBoxHead2.style.display = 'block';
             } else if (clickedElement === 'box-head3') {
                 content1.style.display = 'none';
                 content2.style.display = 'none';
                 content3.style.display = 'block';
+                lineBoxHead1.style.display = 'none';
+                lineBoxHead2.style.display = 'none';
+                lineBoxHead3.style.display = 'block';
             }
         }
     </script>

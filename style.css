@@ -145,19 +145,16 @@ header .loginmenu li svg {
     text-align: center;
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
+    position: relative;
     row-gap: 20px;
     align-items: center;
 }
 
-.box-head p {
-    position: relative;
-}
-
-.box-head:first-child p::after {
+.box-head div::after {
     content: " ";
     position: absolute;
-    top: 47px;
-    left: -20px;
+    /* top: 47px; */
+    left: 65px;
     width: 70px;
     height: 5px;
     background-color: #000000;
@@ -210,6 +207,11 @@ header .loginmenu li svg {
 
 .box-contents .box-content2,
 .box-contents .box-content3 {
+    display: none;
+}
+
+.lineboxhead2,
+.lineboxhead3 {
     display: none;
 }
 
@@ -796,6 +798,10 @@ footer .maincon h5 {
     font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-bottom: 15px;
     cursor: pointer;
+}
+
+.footermenu ul li:hover {
+    color: #a89b9b;
 }
 
 /* socail menu */
